@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kirara test</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    </head>
+    <body>
+        <h1>キャラクターステータス一覧</h1>
+        <table border="1">
+            <tr>
+                <td>キャラ</td>
+                <td>クラス</td>
+                <td>HP</td>
+                <td>ATK</td>
+                <td>MAT</td>
+                <td>DEF</td>
+                <td>MDEF</td>
+                <td>SPD</td>
+                <td>物理決定力指数</td>
+                <td>魔法決定力指数</td>
+                <td>物理耐久力指数</td>
+                <td>魔法耐久力指数</td>
+            </tr>
+            
+            <tr>
+                <td>{{object}}</td>
+                <td>{{object.get_job_display}}</td>
+                <td>{{object.hp}}</td>
+                <td>{{object.atk}}</td>
+                <td>{{object.matk}}</td>
+                <td>{{object.dif}}</td>
+                <td>{{object.mdif}}</td>
+                <td>{{object.spd}}</td>
+                <td>{{object.calcAtk}}</td>
+                <td>{{object.calcMatk}}</td>
+                <td>{{object.calcDif}}</td>
+                <td>{{object.calcMdif}}</td>
+            </tr>
+        </table>
+    </body>
+</html>

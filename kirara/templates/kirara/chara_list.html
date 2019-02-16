@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kirara test</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    </head>
+    <body>
+        <h1>キャラクターステータス一覧</h1>
+        <table border="1">
+            <tr>
+                <td>キャラ</td>
+                <td>クラス</td>
+                <td>HP</td>
+                <td>ATK</td>
+                <td>MAT</td>
+                <td>DEF</td>
+                <td>MDEF</td>
+                <td>SPD</td>
+                <td>物理決定力指数</td>
+                <td>魔法決定力指数</td>
+                <td>物理耐久力指数</td>
+                <td>魔法耐久力指数</td>
+            </tr>
+            {% for chara in object_list%}
+            <tr>
+                <td><a href="{% url 'chara_detail' pk=chara.id%}">{{chara}}</a></td>
+                <td>{{chara.get_job_display}}</td>
+                <td>{{chara.hp}}</td>
+                <td>{{chara.atk}}</td>
+                <td>{{chara.matk}}</td>
+                <td>{{chara.dif}}</td>
+                <td>{{chara.mdif}}</td>
+                <td>{{chara.spd}}</td>
+                <td>{{chara.calcAtk}}</td>
+                <td>{{chara.calcMatk}}</td>
+                <td>{{chara.calcDif}}</td>
+                <td>{{chara.calcMdif}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
